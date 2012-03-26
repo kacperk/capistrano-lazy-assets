@@ -1,6 +1,4 @@
 Capistrano::Configuration.instance.load do
-  set :shared_children, %w(system log pids config)
-
   namespace :deploy do
     namespace :assets do
       task :precompile, :roles => :web, :except => { :no_release => true } do
